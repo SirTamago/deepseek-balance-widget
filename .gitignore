@@ -25,3 +25,5 @@ secrets.properties
 captures/
 .externalNativeBuild/
 .cxx/
+version.properties
+versions.txt

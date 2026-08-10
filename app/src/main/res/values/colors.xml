@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ic_launcher_background">#FFFFFF</color>
+    <!-- 浅色模式下小组件齿轮图标颜色 -->
+    <color name="widget_icon">#49454F</color>
+</resources>
