@@ -56,7 +56,7 @@ Compose BOM 2024.12.01 (M3) · Glance 1.1.1 · WorkManager 2.10.0 · Retrofit 2.
 `app/build.gradle.kts` 顶部：每次构建读 `version.properties` → `+1` 写回 → `versionCode = N`、`versionName = "1.0.N"`；`versions.txt` 追加记录。两文件均已 gitignore（本地记录）。
 
 - 指定版本号：临时改 build.gradle.kts 的 `versionCode`/`versionName` 两行，构建后恢复
-- 当前计数在 4（下一构建 = 1.0.5）
+- 当前 versionCode 计数在 1（versionName 固定为 1.0.0）
 
 ## 部署到手机（无线 adb + vivo）
 
@@ -69,12 +69,12 @@ Compose BOM 2024.12.01 (M3) · Glance 1.1.1 · WorkManager 2.10.0 · Retrofit 2.
 
 - **vivo 等机型会延迟/拦截 WorkManager 后台一次性任务** → 曾导致小组件点击刷新「点了没反应」。已验证的解法：`ActionCallback` 内直连网络（goAsync 无超时，3 秒内完成）。当前 v1 仍是 WorkManager 路径（用户回滚后暂未合回）
 - 小组件透明度/样式功能、直连刷新版均已**回滚**，当前代码 = v1 原版 + 黑白鲸鱼图标
-- 版本历史：1.0.0(原始 v1) → 1.0.1(回滚+版本机制) → 1.0.2(透明度/刷新按钮，已弃) → 1.0.4(黑白鲸鱼图标，当前)
+- 版本历史：1.0.0(原始 v1) → 1.0.1(回滚+版本机制) → 1.0.2(透明度/刷新按钮，已弃) → 1.0.4(黑白鲸鱼图标) → 重新发布为 1.0.0(当前)
 
 ## 发布
 
 ```bash
-gh release create v1.0.x app/build/outputs/apk/debug/app-debug.apk --title "..." --notes "..."
+gh release create v1.0.0 app/build/outputs/apk/debug/app-debug.apk --title "..." --notes "..."
 ```
 
-远程：`github.com/SirTamago/deepseek-balance-widget`（main 分支；当前 HEAD 对应已发布的 v1.0.4）。
+远程：`github.com/SirTamago/deepseek-balance-widget`（main 分支；当前 HEAD 对应已发布的 v1.0.0）。

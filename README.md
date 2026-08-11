@@ -22,7 +22,7 @@ Android 桌面小组件，实时显示 DeepSeek API 账户余额（人民币）�
 从 GitHub Releases 下载 APK 直接安装：
 https://github.com/SirTamago/deepseek-balance-widget/releases
 
-- 当前版本：**v1.0.4**（黑白鲸鱼图标，v1 原版功能）
+- 当前版本：**v1.0.0**（黑白鲸鱼图标，v1 原版功能）
 - debug 签名，可覆盖安装；首次使用需添加 API Key（`sk-...`）
 
 ## 技术方案
